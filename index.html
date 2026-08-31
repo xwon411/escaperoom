@@ -131,7 +131,7 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
 .plancard{max-width:520px;margin:0 auto}
 .planpaper{position:relative;width:100%;aspect-ratio:600/760;background:#f2ead6;border:1px solid #d8cca9;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.28);overflow:visible}
 .planface{position:absolute;inset:0;overflow:auto;padding:8px}
-.planface.planback{padding:16px}
+.planface.planback{padding:16px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .planface.hidden{display:none}
 .plantools{display:flex;gap:10px;justify-content:center;margin-top:12px}
 .plantools button{border:1px solid #8d9daa;border-radius:8px;background:#fff;padding:7px 14px;cursor:pointer;font:800 13px/1 'Nanum Gothic';color:#315b78}
@@ -154,7 +154,7 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
 .titleblk{width:100%;border-collapse:collapse;margin-top:14px;font:700 12px/1 'Nanum Gothic'}
 .titleblk td{border:1px solid #3a3833;padding:7px 8px;color:#1a1a1a;text-align:center}
 .titleblk td:nth-child(odd){background:#e7ddc1;color:#3a3833;white-space:nowrap;font-weight:800;width:70px}
-.backpage{position:relative;background:#f4efe0;border:1px solid #d8cca9;border-radius:6px;padding:20px 20px;min-height:100%;overflow:hidden;touch-action:none}
+.backpage{position:relative;background:#f4efe0;border:1px solid #d8cca9;border-radius:6px;padding:20px 20px;min-height:100%;overflow:hidden}
 .backhdr{text-align:center;font:800 13px/1 'Nanum Gothic';color:#1a1a1a;border-bottom:2px solid #3a3833;padding-bottom:8px;margin-bottom:12px}
 .gnotes{font:700 11.5px/1.75 'Nanum Gothic';color:#1a1a1a;margin-bottom:12px}
 .notetext{font:800 15px/1.95 'Nanum Gothic';word-spacing:2px;user-select:none;color:#8a6d3a;margin-bottom:12px}
@@ -312,7 +312,7 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
     <div class="step reveal"><div class="no">05</div><div class="t">강의계획서 8종</div><div class="rule"></div></div>
     <div class="syl-grid reveal" id="syl"></div>
 
-    <div class="lockgate" data-answer="201" data-next="stage2">
+    <div class="lockgate" data-answer="220" data-next="stage2">
       <div class="lk">🔒 첫 번째 자물쇠</div>
       <div class="lockrow"><input maxlength="4" inputmode="numeric" placeholder="■■■"><button>확인</button></div>
       <div class="lockmsg"></div>
@@ -442,8 +442,8 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
     <div class="oplock"><input id="opPw" maxlength="4" inputmode="numeric" placeholder="••••"><button id="opBtn">열기</button><span id="opMsg" style="color:#ff8a7a;font:700 12px/2.6 'Nanum Gothic'"></span></div>
     <div class="op-content" id="opContent">
       <div class="op-card"><h4>정답 체인</h4><ol class="chain">
-        <li>일기·신문·달력·시간표·강계 → 과목코드 = 현장기록분석 <b>CFE201</b></li>
-        <li>【자물쇠 1 = 201】 → 1번 상자 오픈</li>
+        <li>일기·신문·달력·시간표·강계 → 과목코드 = 현장기록분석 <b>CFE201</b>, 과제일 9/19</li>
+        <li>【자물쇠 1 = 201 + 19 = 220】 → 1번 상자 오픈</li>
         <li>피그펜 해독 → 좌표 A3·B2·D4·D2·B4·A3 → 도면에서 <b>물고기</b></li>
         <li>달력에서 물고기 날짜(1,4,9,13,17,21,27,30) → 조각 카드 색칠</li>
         <li>세븐세그먼트 겹치기 → 흰 획 = <b>2512</b></li>
@@ -454,14 +454,14 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
       </ol></div>
       <div class="op-card"><h4>세팅</h4>
         <p style="color:#cfe0ee;font-size:13px;margin:0 0 6px">· 테이블: 일기·신문·달력(기호만)·시간표·강계. 강계 8종 중 CFE201에만 9/19=42쪽 과제.</p>
-        <p style="color:#cfe0ee;font-size:13px;margin:0 0 6px">· 1번 상자(201): 피그펜 해독표·도면·암호카드·색칠도구·조각카드.</p>
+        <p style="color:#cfe0ee;font-size:13px;margin:0 0 6px">· 1번 상자(220): 피그펜 해독표·도면·암호카드·색칠도구·조각카드.</p>
         <p style="color:#cfe0ee;font-size:13px;margin:0">· 2번 상자(2512): 책갈피 1개·교재 42쪽. 3번 자물쇠(6707)=사물함. 교재→방4개→평면도 치수 천의자리.</p>
       </div>
     </div>
   </div>
 </details>
 
-<div class="foot">잃어버린 청춘 구출 대작전! · 웹 방탈출 · 로직 검증 완료 (201 → 2512 → 6707)</div>
+<div class="foot">잃어버린 청춘 구출 대작전! · 웹 방탈출 · 로직 검증 완료 (220 → 2512 → 6707)</div>
 </div>
 
 <script>
@@ -470,7 +470,7 @@ const DIARY=[
  ["개강","드디어 개강. 방을 정리하며 이번 학기는 진짜 알차게 보내자고 다짐했다. 창가 쪽 책상 하나를 내 자리로 정하고, 새 노트 첫 장에 이번 학기 목표도 적었다. 아직은 시간도 마음도 넉넉해서 올해는 뭔가 다를 것 같은 예감이 든다."],
  ["벌써 밀림","수업이 벌써 빡세다. 과제가 하나둘 쌓이기 시작해서 오늘도 밤늦게까지 도서관에 남아 겨우 하나를 끝냈다. 옆자리 친구도 마감표를 보며 한숨을 쉬었는데, 서로 끝나면 밥부터 먹자고 약속했다. 계획표에는 빈칸이 거의 남지 않았다."],
  ["익숙해지는 밤","밤늦게까지 남아 할 일을 했다. 다들 각자 바쁘지만, 불 켜진 책상에 앉아 있으면 이상하게 혼자가 아니라는 생각이 든다. 내일 할 일을 적어 두고 나오는데 복도 창문에 비친 얼굴이 조금 피곤해 보였다. 그래도 오늘 읽은 내용은 꽤 재미있었다."],
- ["그날","오후 3시 40분쯤 중앙도서관이 갑자기 깜깜해졌다. 20분 남짓 비상등만 켜져, 책도 못 찾고 한참을 서 있었다. 사흘 뒤 제출할 요약 과제를 아직 못 냈다. 그날의 기록을 다시 확인하려면 잠겨 있는 기록 상자부터 열어야 한다. 비밀번호는 늘 그 과목 분류번호의 숫자로 정해 둔다."],
+ ["그날","오후 3시 40분쯤 중앙도서관이 갑자기 깜깜해졌다. 20분 남짓 비상등만 켜져, 책도 못 찾고 한참을 서 있었다. 사흘 뒤 제출할 요약 과제를 아직 못 냈다. 그날의 기록을 다시 확인하려면 잠겨 있는 기록 상자부터 열어야 한다. 비밀번호는 늘 그 과목 분류번호의 숫자에 과제제출 날짜를 더한 값으로 정해 둔다."],
  ["쫓기는 날들","어제 도서관에서 못 찾은 자료를 오늘 다시 빌렸다. 과제는 아직 시작도 못 했는데 시간은 왜 이렇게 빨리 가는지, 수업이 끝나자마자 다음 강의실로 뛰어갔다. 가방 안에는 프린트와 메모가 뒤섞여 있었고, 나중에 정리해야지 하면서 또 미뤄 버렸다."],
  ["밤샘, 그리고 발견","마감이 코앞이라 결국 밤을 샜다. 정리하다 예전 축제 사진과 포스터를 발견했는데, 그때는 별일 아닌 하루도 참 반짝였던 것 같다. 버리지 못하고 다시 서랍에 넣었다. 언젠가 여유가 생기면 그 사진 속 친구들에게 먼저 연락해 봐야겠다."],
  ["놓친 기분","과제는 겨우 냈는데, 뭔가 하나를 빠뜨린 기분이 든다. 분명 챙겨야 할 게 있었는데 자꾸 마음에 걸린다. 책상 서랍과 가방을 몇 번이나 뒤졌지만 필요한 것 대신 오래된 영수증과 접힌 메모만 나왔다. 다음 주에는 할 일을 미루지 말아야지."],
