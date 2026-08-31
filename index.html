@@ -201,6 +201,7 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
 .btn.reset{background:transparent;color:var(--cyan);border:1px solid rgba(150,196,228,.4)}
 .nlcard{width:100%;max-width:520px;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;line-height:0}
 .nlcard canvas{display:block;width:100%;height:auto;cursor:crosshair}
+.pieceinstruction{margin:0 0 8px;font:700 15px/1.4 'Nanum Gothic';color:var(--blue);text-align:center}
 .brushhint{font:400 12px/1.4 'Nanum Gothic';color:var(--cyan);text-align:center}
 .sevenwrap{width:min(100%,480px);margin-top:6px;background:#0c0c0c;border-radius:10px;padding:18px;display:none;overflow:visible}
 .sevenwrap.show{display:block}
@@ -381,10 +382,10 @@ body{margin:0;color:var(--cyan-soft);background:var(--navy);
           <button class="btn overlay" id="overlayBtn">🔻 세븐세그먼트에 겹치기</button>
           <button class="btn reset" id="resetBtn">초기화</button>
         </div>
+        <div class="pieceinstruction">알맞는 곳을 색칠하세요</div>
         <div class="nlcard"><div id="nlcard"></div></div>
         <div class="sevenwrap" id="sevenwrap">
           <svg class="sevensvg" id="seven" viewBox="0 0 440 190" role="img" aria-label="조각 카드와 겹친 네 자리 세븐세그먼트"></svg>
-          <div class="cap">파란 획의 숫자는 그 획을 가린 <b>조각 번호</b>입니다. <b>흰색 획만</b> 읽어 두 번째 자물쇠에 입력하세요.</div>
         </div>
       </div>
     </div>
